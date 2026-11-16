@@ -1,103 +1,161 @@
-# PyGameBox 🎮
+# 🎮 PyGameBox
 
-A lightweight desktop arcade collection made with **Python 3** and **Pygame**. It includes a launcher and four playable games: Snake, Pong, Space Shooter, and Tetris.
+**A little arcade. A lot of fun.**
 
-## Features
+PyGameBox is a desktop arcade collection built with Python and Pygame. It brings four classic arcade-style games together in one launcher, with player registration, persistent high scores, and a local player leaderboard.
+
+
+## 🕹️ Games
+
+| Game | Description |
+|---|---|
+| Snake | Classic and Wraparound modes |
+| Pong | Two-player paddle challenge |
+| Space Shooter | Space combat with automatic shooting |
+| Tetris | Rotate, stack and clear blocks |
+
+## ✨ Features
 
 - Arcade-style launcher with keyboard and mouse navigation
-- Four self-contained games
-- Persistent high scores in a local JSON file
-- Shared drawing helpers, colors, and game configuration
-- No external assets required
-- Small automated tests for score storage
+- Four playable games in one application
+- Player registration and remembered player names
+- Separate high scores for individual games
+- Local player leaderboard with rankings
+- Snake Classic and Wraparound have independent records
+- Persistent score storage using JSON
+- Reusable UI components and shared configuration
 
-## Requirements
+## 🛠️ Technologies Used
 
-- Python 3.10 or newer (tested with Python 3.13)
+- Python 3
+- Pygame
+- JSON for local data storage
+- Git and GitHub
+- Visual Studio Code
+
+## 💻 Installation
+
+### Requirements
+
+- Python 3.10 or newer
 - Pygame 2.6.1 or newer
 
-## Run on Windows 11
+### Windows Setup
 
-Open this folder in VS Code. In the integrated terminal, run:
+Clone the repository:
 
-```powershell
+```bash
+git clone https://github.com/murtazahbatliwala99/pygamebox-arcade.git
+```
+
+Move into the project directory:
+
+```bash
+cd pygamebox-arcade
+```
+
+Create a virtual environment:
+
+```bash
 python -m venv .venv
+```
+
+Activate it:
+
+```powershell
 .\.venv\Scripts\Activate.ps1
+```
+
+Install dependencies:
+
+```bash
 python -m pip install -r requirements.txt
+```
+
+Launch PyGameBox:
+
+```bash
 python main.py
 ```
 
-If PowerShell blocks activation, you can avoid activation and install/run through the environment directly:
-
-```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
-.\.venv\Scripts\python.exe main.py
-```
-
-If you already created a virtual environment and installed Pygame, simply run:
-
-```powershell
-python main.py
-```
-
-## Controls
+## 🎮 Controls
 
 | Game | Controls |
 |---|---|
-| Launcher | Mouse click or ↑ / ↓, Enter; Esc quits |
-| Snake | Choose Classic (walls end the run) or Wraparound (edges connect); arrow keys/WASD move; P pauses; Esc returns |
-| Pong | Player 1: W/S; Player 2: Up/Down arrows; first to 5 points wins; Esc returns |
-| Space Shooter | A/D or Left/Right to move; shooting is automatic; Esc returns |
-| Tetris | Left/Right move, Up rotate, Down soft drop, Space hard drop; Esc returns |
-| All games | R restarts after game over |
+| Main Menu | Arrow keys to select, Enter to play, L for leaderboard, Esc to quit |
+| Snake | Arrow keys / WASD to move, P to pause, Esc to return |
+| Pong | Player 1: W/S, Player 2: Up/Down |
+| Space Shooter | A/D or Left/Right to move |
+| Tetris | Left/Right to move, Up to rotate, Down to soft drop, Space to hard drop |
+| Game Over | R to restart |
 
-## Project structure
+## 📁 Project Structure
 
 ```text
 PyGameBox/
-├── assets/                 # Optional images, sounds and fonts
+├── assets/
+│   ├── fonts/
+│   ├── images/
+│   └── sounds/
 ├── core/
-│   ├── config.py           # Window settings and color palette
-│   ├── launcher.py         # Main menu and game loop
-│   ├── storage.py          # JSON high-score persistence
-│   └── ui.py               # Shared drawing helpers
+│   ├── config.py
+│   ├── launcher.py
+│   ├── leaderboard.py
+│   ├── leaderboard_screen.py
+│   ├── player.py
+│   ├── player_screen.py
+│   ├── storage.py
+│   └── ui.py
+├── data/
 ├── games/
-│   ├── snake/game.py
-│   ├── pong/game.py
-│   ├── shooter/game.py
-│   └── tetris/game.py
+│   ├── snake/
+│   ├── pong/
+│   ├── shooter/
+│   └── tetris/
 ├── tests/
-│   └── test_storage.py
-├── data/                   # Created automatically for local scores
 ├── main.py
 ├── requirements.txt
-└── LICENSE
+├── LICENSE
+└── README.md
 ```
 
-## Run tests
+## 🏆 Leaderboard
 
-```powershell
+PyGameBox currently includes a **local leaderboard** that stores each player's highest score separately for:
+
+- Snake Classic
+- Snake Wraparound
+- Pong
+- Space Shooter
+- Tetris
+
+Scores are stored locally on the player's computer. An online global leaderboard is a planned future enhancement.
+
+## 🧪 Running Tests
+
+Run the project's unit tests:
+
+```bash
 python -m unittest discover -s tests -v
 ```
 
-## Notes
+## 🚀 Future Improvements
 
-- Scores are stored locally in `data/scores.json`; this file is intentionally ignored by Git.
-- This is an initial open-source release. Contributions, bug reports, and feature suggestions are welcome.
-- The project is provided under the MIT License.
+- [ ] Online global leaderboard
+- [ ] Sound effects and music controls
+- [ ] Difficulty settings
+- [ ] Gamepad support
+- [ ] Additional arcade games
+- [ ] Standalone executable release
 
-## Roadmap
+## 👨‍💻 Developer
 
-- [ ] Add sound effects and music controls
-- [ ] Add difficulty settings
-- [ ] Add gamepad support
-- [ ] Add more arcade games
-- [ ] Add screenshots and release builds
+**Murtaza Batliwala**
 
+Created as a personal Python game development project to explore programming, game logic, user interfaces, data persistence, and software development workflows.
 
-## High scores
+GitHub: [@murtazahbatliwala99](https://github.com/murtazahbatliwala99)
 
-High scores are stored separately for each game in `data/scores.json`.
-Snake has independent records for `snake_classic` and `snake_wrap`, so the
-two modes never overwrite each other's best score. Pong records the winning
-score for each match; the other games record the highest run score.
+## 📄 License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
