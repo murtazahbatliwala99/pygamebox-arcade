@@ -1,0 +1,17 @@
+"""Shared configuration and theme."""
+WIDTH = 1000
+HEIGHT = 650
+FPS = 60
+TITLE = "PyGameBox"
+
+BG = (13, 17, 30)
+PANEL = (24, 31, 51)
+PANEL_HOVER = (35, 47, 74)
+WHITE = (238, 243, 255)
+MUTED = (151, 165, 190)
+CYAN = (66, 220, 232)
+PURPLE = (157, 111, 255)
+PINK = (255, 104, 170)
+GREEN = (94, 230, 155)
+YELLOW = (255, 211, 107)
+RED = (255, 100, 110)
