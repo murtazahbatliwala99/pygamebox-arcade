@@ -1,0 +1,28 @@
+{
+    "scores": [
+        {
+            "player": "AIZEN",
+            "game": "snake_classic",
+            "score": 160,
+            "date": "2026-11-16"
+        },
+        {
+            "player": "AIZEN",
+            "game": "snake_wrap",
+            "score": 210,
+            "date": "2026-11-16"
+        },
+        {
+            "player": "AIZEN",
+            "game": "pong",
+            "score": 5,
+            "date": "2026-11-16"
+        },
+        {
+            "player": "AIZEN",
+            "game": "shooter",
+            "score": 70,
+            "date": "2026-11-16"
+        }
+    ]
+}
